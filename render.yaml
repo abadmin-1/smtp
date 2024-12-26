@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: smtp-php-app
+    env: php
+    plan: free
+    buildCommand: "composer install"
+    startCommand: "php -S 0.0.0.0:10000"
+    github:
+      repo: abadmin-1/smtp
