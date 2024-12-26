@@ -1,9 +1,9 @@
 services:
   - type: web
     name: smtp-php-app
-    env: php
+    env: docker
     plan: free
-    buildCommand: "composer install"
-    startCommand: "php -S 0.0.0.0:10000"
+    docker:
+      dockerfilePath: Dockerfile
     github:
       repo: abadmin-1/smtp
